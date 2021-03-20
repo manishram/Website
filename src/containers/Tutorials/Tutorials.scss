@@ -1,27 +1,4 @@
-.hiring-freeze {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 90vh;
-  justify-content: center;
-  padding-bottom: 5rem;
-  text-align: center;
-  width: 100%;
-}
-
-.hiring-freeze h1 {
-  font-weight: 400;
-}
-
-.hiring-freeze h3 {
-  font-weight: 900;
-}
-
-.hiring-freeze h3 span {
-  color: #ed5f74;
-}
-
-.Openings {
+.Tutorials {
   display: grid;
   grid-template-columns: 240px auto;
   height: 100%;
@@ -34,25 +11,42 @@
   &__left-menu {
     grid-column: 1 / span 1;
   }
-
-  &__opening-details {
+  &__right-playlist {
+    background: red;
+  }
+  &__tutorial-watch {
+    display: flex;
     overflow-y: auto;
-    padding: 12px 0 48px;
+    padding: 30px 40px 36px;
   }
 
-  &__opening-list {
+  &__tutorial-list {
     grid-column: 2 / span 1;
     overflow-y: auto;
-    padding: 12px 0 48px;
   }
 
-  &__opening-list-heading {
+  &__tutorial-list-heading {
     font-size: 36px;
-    font-weight: 300;
+    font-weight: bold;
     line-height: 1.25;
-    margin: 16px 54px 36px;
+    margin: 16px 0 28px;
   }
-
+  &__tutorial-list {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 32% 32% 32%;
+  }
+  &__tutorial-list-panel {
+    padding: 16px 40px 36px;
+  }
+  @media (max-width: 1200px) {
+    &__tutorial-list {
+      grid-template-columns: 50% 50%;
+    }
+    &__tutorial-list-panel {
+      padding: 16px 40px 36px;
+    }
+  }
   @media (max-width: 992px) {
     grid-template-columns: auto;
     grid-template-rows: fit-content(0) auto;
@@ -68,15 +62,19 @@
       display: none;
     }
 
-    &__opening-list {
+    &__tutorial-list-panel {
       grid-column: 1 / span 1;
       grid-row: 2 / span 1;
+      padding: 16px 12px 36px;
+    }
+    &__tutorial-list {
+      grid-template-columns: 50% 50%;
     }
   }
 
   @media (max-width: 768px) {
-    &__opening-list-heading {
-      margin: 16px 42px 36px;
+    &__tutorial-list {
+      grid-template-columns: auto;
     }
   }
 }

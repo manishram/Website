@@ -1,0 +1,54 @@
+.TutorialCard {
+  font-size: var(--font-size-regular);
+  line-height: 1.25;
+  margin: 0 0 12px;
+  min-width: 0;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+  &__thumbnail {
+    width: 100%;
+  }
+
+  &__details {
+    min-width: 0;
+    padding: 18px 15px 18px 24px;
+
+    & > div {
+      margin-top: 6px;
+    }
+
+    &-name {
+      font-size: var(--font-size-regular);
+      font-weight: 600;
+      line-height: 25px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &-more-info {
+      color: var(--color-sail-gray-400);
+      font-size: var(--font-size-small-regular);
+      font-weight: 400;
+      line-height: 25px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+
+    &__details {
+      text-align: center;
+    }
+  }
+}

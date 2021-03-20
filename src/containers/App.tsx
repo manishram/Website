@@ -26,6 +26,7 @@ import Social from './Social';
 import StyleGuide from './StyleGuide';
 import Tasks from './Tasks';
 import Teams from './Teams';
+import Tutorials from './Tutorials';
 import WebMap from './Webmap';
 
 interface GoogleAnalyticsWindow extends Window {
@@ -74,6 +75,7 @@ const App: FC = () => {
           <Route exact path="/tasks/:repository" component={Tasks} />
           <Redirect exact path="/teams" to="/teams/All/Members" />
           <Route exact path="/teams/:team/:tab?/:resource?" component={Teams} />
+          <Route exact path="/tutorials/:category/:tutorialId?" component={Tutorials} />
           <Route path="/account-manager/:chapter?" component={AccountManager} />
           <Route path="/bank-api/:chapter?" component={BankApi} />
           <Route path="/confirmation-validator-api/:chapter?" component={ConfirmationValidatorApi} />
